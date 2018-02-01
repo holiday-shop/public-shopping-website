@@ -46,6 +46,14 @@ div.city {
     width: 12em;
 }
 
-div.cityUpdateInfo {
+p.cityUpdateInfo {
+    padding-top: 1em;
     background-color: white;
+    padding-bottom: 1em;
+}
+
+nav {
+    text-align:center;
+    color: white;
+    font-weight: bold;
 }
