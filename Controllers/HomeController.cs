@@ -45,7 +45,7 @@ namespace dotnetcore_city_info.Controllers
                 new City("Barcelona", "Europe/Madrid"),
                 new City("Honolulu", "Pacific/Honolulu"),
                 new City("Honolulu", "Pacific/Honolulu"),
-                new City("Sydney", "Audtralia/Sydney"),
+                new City("Sydney", "Australia/Sydney"),
                 new City("Iceland", "UTC")  
             }; 
             
