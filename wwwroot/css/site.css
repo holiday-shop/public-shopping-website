@@ -33,3 +33,10 @@ body {
         display: none;
     }
 }
+
+div.city {
+    padding: 2em; 
+    background-color: #dee3e7;
+    border: 1px solid black;
+    border-radius: 1.5em;
+}
