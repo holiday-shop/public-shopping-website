@@ -40,4 +40,7 @@ div.city {
     background-color: #dee3e7;
     padding: 1em; 
     text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1em;
 }
