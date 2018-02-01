@@ -38,8 +38,12 @@ namespace dotnetcore_city_info.Controllers
         public JsonResult GetCities()
         {
             var cities = new List<City>() {
-                new City("London", "Greenwich Mean Time"), 
-                new City("Paris", "Central European Time")  
+                new City("London", "Greenwich"), 
+                new City("Paris", "Central European Time"),
+                new City("Moscow", "Europe/Moscow"),
+                new City("Munich", "Europe/Berlin"),
+                new City("Barcelona", "Europe/Madrid"),
+                new City("Iceland", "UTC")  
             }; 
             
             return Json(cities);
