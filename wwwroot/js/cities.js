@@ -3,7 +3,8 @@ function renderCities(cities) {
 
     $(cities).each(function(i, city) {
         elCity = $('<div class = "city">')
-        elCity.text = city.name + " " + city.time
+        elCity.append($('<h2>' + city.name + '</h2>' ));
+        elCity.append($('<span class = "time">' + city.time + '</span>')); 
 
         $('content').append(elCity);
     });
@@ -18,5 +19,5 @@ function requestCities() {
 }
 
 function startCityLoadingLoop() {
-    window.cityLoader = setInterval(requestCities, 1);
+    window.cityLoader = setInterval(requestCities, 1000);
 }
