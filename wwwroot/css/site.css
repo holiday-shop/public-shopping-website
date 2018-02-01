@@ -1,4 +1,4 @@
-body {
+﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -32,11 +32,4 @@ body {
     .carousel-caption {
         display: none;
     }
-}
-
-div.city {
-    padding: 2em; 
-    background-color: #dee3e7;
-    border: 1px solid black;
-    border-radius: 1.5em;
 }
