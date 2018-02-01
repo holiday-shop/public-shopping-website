@@ -54,6 +54,7 @@ p.cityUpdateInfo {
 nav {
     text-align:center;
     background-color: black;
+    padding: .5em;
     margin-bottom: 2em;
     color: white;
     font-weight: bold;
