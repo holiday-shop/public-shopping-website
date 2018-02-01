@@ -7,9 +7,15 @@ namespace dotnetcore_city_info.Models
         public string Name { get; }
         public string Time { get; }
 
-        public City(string name, string time) {
-            this.Name = name;
-            this.Time = time;
+        public string PodName { get; }
+
+
+        public City(string name, string tz) {
+            this.Name = name; 
+            this.Time = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, tz).ToString();
+
+            this.PodName = System.Net.Dns.GetHostName();
         }
+
     }
 }

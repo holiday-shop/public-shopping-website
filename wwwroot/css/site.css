@@ -43,4 +43,9 @@ div.city {
     display: inline-block;
     vertical-align: top;
     margin: 1em;
+    width: 12em;
+}
+
+div.cityUpdateInfo {
+    background-color: white;
 }

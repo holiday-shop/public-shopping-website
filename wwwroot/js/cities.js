@@ -5,6 +5,7 @@ function renderCities(cities) {
         elCity = $('<div class = "city">')
         elCity.append($('<h2>' + city.name + '</h2>' ));
         elCity.append($('<span class = "time">' + city.time + '</span>')); 
+        elCity.append($('<p class = "cityUpdateInfo">Updated by pod <strong>' + city.podName + '</strong></span>')); 
 
         $('content').append(elCity);
     });
@@ -12,7 +13,7 @@ function renderCities(cities) {
 
 function requestCities() {
     $.getJSON({
-        dataType: "json",
+        dataType: "json", 
         url: "/Home/GetCities",
         success: renderCities
     });
