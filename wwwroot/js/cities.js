@@ -5,11 +5,11 @@ function renderCities(cities) {
         elCity = $('<div class = "city">')
         elCity.text = city.name + " " + city.time
 
-        $('content').append(city);
+        $('content').append(elCity);
     });
-}
+} 
 
-function loadCities() {
+function requestCities() {
     $.getJSON({
         dataType: "json",
         url: "/Home/GetCities",
@@ -18,5 +18,5 @@ function loadCities() {
 }
 
 function startCityLoadingLoop() {
-    window.cityLoader = setInterval(requestCities, 5);
+    window.cityLoader = setInterval(requestCities, 1);
 }
