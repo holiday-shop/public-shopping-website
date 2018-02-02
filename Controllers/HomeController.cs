@@ -38,14 +38,14 @@ namespace dotnetcore_city_info.Controllers
         public JsonResult GetCities()
         {
             var cities = new List<City>() {
-                new City("London", "Greenwich", "Cloud-Rain"), 
-                new City("Paris", "CET", "Cloud-Lightning"),
-                new City("Moscow", "Europe/Moscow", "Cloud-Sun"),
-                new City("Munich", "Europe/Berlin", "Cloud-Rain"),
-                new City("Barcelona", "Europe/Madrid", "Sun"),
-                new City("Honolulu", "Pacific/Honolulu", "Sun"),
-                new City("Sydney", "Australia/Sydney", "Sun"),
-                new City("Iceland", "UTC", "Cloud-Sun")  
+                new City("London", "Greenwich", "Cloud-Rain", "8.788 million"), 
+                new City("Paris", "CET", "Cloud-Lightning", "2.244 million"),
+                new City("Moscow", "Europe/Moscow", "Cloud-Sun", "11.92 million"),
+                new City("Munich", "Europe/Berlin", "Cloud-Rain", "1.43 million"),
+                new City("Barcelona", "Europe/Madrid", "Sun", "3.166 million"),
+                new City("Honolulu", "Pacific/Honolulu", "Sun", "274,658 thousand"),
+                new City("Sydney", "Australia/Sydney", "Sun", "4.029 million" ),
+                new City("Iceland", "UTC", "Cloud-Sun", "334,252 thousand")  
             }; 
             
             return Json(cities);
