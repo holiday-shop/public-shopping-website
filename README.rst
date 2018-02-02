@@ -5,6 +5,8 @@ A simple demo application that refreshes information about cities and shows the
 results on a web page. This demonstrates severeal features of OpenShift
 Container Platform.
 
+.. contents:: Table of Contents
+
 .. image:: var/screenshot.png
 
 Deploying a feature branch in a A/B deployment.
@@ -48,3 +50,13 @@ disabled to disable session persistance.
 .. image:: var/withWeather.png
 
 .. image:: var/withoutWeather.png
+
+Making a application configuration change
+---
+
+# This C# dotnet application will check for the environment variable
+SHOW_POPULATION as a means for enabling this feature in responses to requests
+for city information. You should set this in the DeploymentConfig, and watch 
+ OpenShift deploy a new version automatically.
+
+.. image:: var/editDcEnv.png
