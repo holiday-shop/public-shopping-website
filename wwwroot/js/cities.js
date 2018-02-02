@@ -1,4 +1,4 @@
-window.displayWeather = false;
+window.displayWeather = true;
 
 function renderCities(cities) {
     $('content').empty()
