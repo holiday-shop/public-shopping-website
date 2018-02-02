@@ -5,7 +5,9 @@ A simple demo application that refreshes information about cities and shows the
 results on a web page. This demonstrates severeal features of OpenShift
 Container Platform.
 
-.. contents:: List of Demo Scenarios
+.. contents:: **List of Demo Scenarios;**
+
+**Screenshot**
 
 .. image:: var/screenshot.png
 
