@@ -5,9 +5,12 @@ A simple demo application that refreshes information about cities and shows the
 results on a web page. This demonstrates severeal features of OpenShift
 Container Platform.
 
-.. contents:: Table of Contents
+.. contents:: List of Demo Scenarios
 
 .. image:: var/screenshot.png
+
+Demo Scenarios
+==============
 
 Deploying a feature branch in a A/B deployment.
 ----
@@ -60,3 +63,8 @@ for city information. You should set this in the DeploymentConfig, and watch
  OpenShift deploy a new version automatically.
 
 .. image:: var/editDcEnv.png
+
+Scaling a deployment
+----
+
+TODO :) 
