@@ -52,7 +52,7 @@ disabled to disable session persistance.
 .. image:: var/withoutWeather.png
 
 Making a application configuration change
----
+----
 
 # This C# dotnet application will check for the environment variable
 SHOW_POPULATION as a means for enabling this feature in responses to requests
