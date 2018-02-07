@@ -5,12 +5,44 @@ A simple demo application that refreshes information about cities and shows the
 results on a web page. This demonstrates severeal features of OpenShift
 Container Platform.
 
-.. contents:: **List of Demo Scenarios;**
+.. contents:: **Contents;**
 
 **Screenshot**
 
 .. image:: var/screenshot.png
 
+How to deploy this on OpenShift
+===============================
+
+In OpenShift Container Platform, you need to select **.NET Core Builder Images**
+from the service catalog. If you are running OpenShift Origin, you can import 
+this image builder into your service catalog by running `oc create -f ...` 
+against these files; https://github.com/openshift/openshift-ansible/tree/master/roles/openshift_examples/files/examples/v3.7/image-streams
+
+.. image:: var/dotnetcorebuilder.png
+
+This should spawn the deployment wizard, click "Next >";
+
+.. image:: var/dotnetDeploymentWizard1.png
+
+Complete the Wizard with the following details;
+
+* **Add to Project:** Create Project
+* **Project Name:** city-info
+* **Project Display Name:**
+* **Project Description:** ...
+* **Version:** 2.0 - It is very important to use a version 2 builder. The .NET Core version 1 builder is quite different, and expects project.json files and similar that don't exist in version 2.0.
+* **Application Name:** city-info
+* **Git Repository:** https://github.com/jamesread/dotnetcore-city-info.git
+
+.. image:: var/dotnetDeploymentWizard2.png
+
+Once the project has been created, it should see a build start in the project overview;
+
+.. image:: var/appOverview.png
+
+You are now ready to try out one or more of the demo scenarios!
+   
 Demo Scenarios
 ==============
 
@@ -56,7 +88,7 @@ disabled to disable session persistance.
 
 .. image:: var/withoutWeather.png
 
-Making a application configuration change
+Making a application configuration change / Feature Toggles
 ----
 
 # This C# dotnet application will check for the environment variable
