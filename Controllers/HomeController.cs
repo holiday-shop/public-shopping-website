@@ -5,11 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using dotnetcore_city_info.Models;
+using dotnetcore_city_info.Repository;
  
 namespace dotnetcore_city_info.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ICityGeoInformationRepository _cityGeoInformationRepository;
+
+        public HomeController(ICityGeoInformationRepository cityGeoInformationRepository)
+        {
+            _cityGeoInformationRepository = cityGeoInformationRepository;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -46,8 +54,15 @@ namespace dotnetcore_city_info.Controllers
                 new City("Honolulu", "Pacific/Honolulu", "Sun", "274,658 thousand"),
                 new City("Sydney", "Australia/Sydney", "Sun", "4.029 million" ),
                 new City("Iceland", "UTC", "Cloud-Sun", "334,252 thousand")  
-            }; 
-            
+            };
+
+            var cityGeoInfos = _cityGeoInformationRepository.GetCities();
+
+            foreach (var city in cities)
+            {
+                city.CityGeoInformation = cityGeoInfos.FirstOrDefault(cgi => string.Equals(cgi.Name, city.Name, StringComparison.OrdinalIgnoreCase));
+            }
+
             return Json(cities);
         } 
     }
