@@ -46,7 +46,7 @@ You are now ready to try out one or more of the demo scenarios!
 Demo Scenarios
 ==============
 
-Deploying a feature branch in a A/B deployment.
+Deploying a feature branch for multivariate testing or A/B deployments
 ----
 
 * Use the .NET Core Builder Image to deploy (the master branch) as normal. This
