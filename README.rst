@@ -117,3 +117,8 @@ Scaling a deployment
 ----
 
 TODO :) 
+
+Blue/Green deployments 
+----
+
+TODO :) 
