@@ -88,7 +88,7 @@ disabled to disable session persistance.
 
 .. image:: var/withoutWeather.png
 
-Making a application configuration change / Feature Toggles
+Using envionment variables for Feature Toggles
 ----
 
 # This C# dotnet application will check for the environment variable
@@ -97,6 +97,21 @@ for city information. You should set this in the DeploymentConfig, and watch
  OpenShift deploy a new version automatically.
 
 .. image:: var/editDcEnv.png
+
+
+Configuring all pods to connect to a database
+----
+
+======================= ================ ======================================
+  Environment Vaiable     Example          Description
+======================= ================ ======================================
+DATABASE_USERNAME       `SA`             Your MsSQL Database Username
+DATABASE_PASSWORD       `toomanysecrets` Your MsSQL Database Password
+======================= ================ ======================================
+
+The database schema can be found in `/var/databaseSchema.sql` in this Git repo.
+
+The database name and the single table name are both hard-coded to `city-info`. 
 
 Scaling a deployment
 ----
