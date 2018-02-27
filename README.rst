@@ -29,9 +29,9 @@ Complete the Wizard with the following details;
 
 * **Add to Project:** Create Project
 * **Project Name:** city-info
-* **Project Display Name:**
+* **Project Display Name:** City Info
 * **Project Description:** ...
-* **Version:** 2.0 - The screenshot above shows the OpenShift builder is version 1.0, however, this builder uses a compiler which is different for .NET Core 1.0 or .NET Core 2.0 projects. The version you are selecting here is the **compiler version**, and this is a .NET Core 2.0 project. Therefore it is very important to select version 2 builder. If you use select version 1 here by accident then it will expect a .NET Core 1.0 project.json files and similar that have been deprecated and the build would fail!
+* **Version:** 2.0 - The screenshot *above* shows the OpenShift builder is version 1.0, however, this builder has the option to use a compiler which is different for .NET Core 1.0 or .NET Core 2.0 projects. The version you are selecting in the screenshot *below* is the **compiler version**, and this is a .NET Core 2.0 project. Therefore it is very important to select version 2 builder. If you use select version 1 here by accident then it will expect a .NET Core 1.0 project.json files and similar that have been deprecated and the build would fail!
 * **Application Name:** city-info
 * **Git Repository:** https://github.com/jamesread/dotnetcore-city-info.git
 
