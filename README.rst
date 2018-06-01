@@ -91,10 +91,9 @@ disabled to disable session persistance.
 Using envionment variables for Feature Toggles
 ----
 
-# This C# dotnet application will check for the environment variable
+This C# dotnet application will check for the environment variable
 SHOW_POPULATION as a means for enabling this feature in responses to requests
-for city information. You should set this in the DeploymentConfig, and watch 
- OpenShift deploy a new version automatically.
+for city information. You should set this in the DeploymentConfig, and watch OpenShift deploy a new version automatically.
 
 .. image:: var/editDcEnv.png
 
