@@ -49,6 +49,9 @@ Demo Scenarios
 Deploying a feature branch for multivariate testing or A/B deployments
 ----
 
+* **Time to demo:** 5 minutes
+* **Why is this cool?:** Feature branches are commonly used by developers to develop new features that have not yet been integrated into the main application. Product Managers might typically want to deploy a feature branch to see how users accept this feature, to test it works as expected, and gradually introduce it as users respond positively. 
+
 * Use the .NET Core Builder Image to deploy (the master branch) as normal. This
 must be built with a v2.0 builder.
 
@@ -110,6 +113,9 @@ You should see your city information pop up now with population numbers;
 Configuring all pods to connect to a database
 ----
 
+* **Time to demo:** 5 minutes
+* **Why is this cool?:** Showcases how microservice workloads absolutely don't have to be stateless only, and how configuration is commonly acheived with containers. 
+
 ======================= ================ ======================================
   Environment Vaiable     Example          Description
 ======================= ================ ======================================
@@ -124,7 +130,19 @@ The database name and the single table name are both hard-coded to `city-info`.
 Scaling a deployment
 ----
 
-TODO :) 
+* **Time to demo:** 3
+* **Why is this cool?:** To show how scaling is so super easy!
+
+You can scale the city-info project at any time, just using the up/down scale buttons. This will not impact existing connected users negatively.
+
+.. image:: var/addPopulation.png
+
+When you view the dashboard, you will see the city-info is provided with a pod hostname. When you scale the application however, you will probably see get updates from a single pod.
+
+This is because OpenShift sets a browser cookie, which sticks you onto one pod by default. You can easily overcome this, block the OpenShift cookie in your browser like so;
+
+.. image:: var/blockCookies1.png
+.. image:: var/blockCookies2.png
 
 Blue/Green deployments 
 ----
