@@ -135,7 +135,7 @@ Scaling a deployment
 
 You can scale the city-info project at any time, just using the up/down scale buttons. This will not impact existing connected users negatively.
 
-.. image:: var/addPopulation.png
+.. image:: var/scalePods.png
 
 When you view the dashboard, you will see the city-info is provided with a pod hostname. When you scale the application however, you will probably see get updates from a single pod.
 
