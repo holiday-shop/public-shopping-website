@@ -91,11 +91,20 @@ disabled to disable session persistance.
 Using envionment variables for Feature Toggles
 ----
 
+* **Time to demo:** 5 minutes
+* **Why is this cool?:** Showchasing how a modern application development principle, "feature toggles", are simply and easily implemented with containers.
+
 This C# dotnet application will check for the environment variable
 SHOW_POPULATION as a means for enabling this feature in responses to requests
 for city information. You should set this in the DeploymentConfig, and watch OpenShift deploy a new version automatically.
 
 .. image:: var/editDcEnv.png
+
+Wait a moment while the application redeploys (necessary for environment variables to take effect). 
+
+You should see your city information pop up now with population numbers;
+
+.. image:: var/addPopulation.png
 
 
 Configuring all pods to connect to a database
