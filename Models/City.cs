@@ -19,7 +19,7 @@ namespace dotnetcore_city_info.Models
             this.Name = name;
             try
             {
-                this.Time = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, tz).ToString();
+                this.Time = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, tz).ToString("HH:mm:ss");
             } catch (Exception)
             {
                 this.Time = "+????";
