@@ -16,8 +16,6 @@ function renderCities(cities) {
             elCity.append($('<p>Population: ' + city.population + '</p>'));
         }
 
-        elCity.append($('<p class = "cityUpdateInfo">Update from pod <strong>' + city.podName + '</strong></span>')); 
-
         $('content').append(elCity);
     });
 } 
