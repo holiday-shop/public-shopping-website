@@ -25,7 +25,7 @@ namespace dotnetcore_city_info.Models
                 this.Time = "+????";
             }
 
-            this.Weather = weatherIcon;
+            this.Weather = ""; // Don't set the weather on this branch.
 
             if (Environment.GetEnvironmentVariable("SHOW_POPULATION") == "YES") {
                 this.Population = population;
