@@ -23,9 +23,11 @@ function renderCities(cities) {
 } 
 
 function requestCities() {
+	/**
 	for (cookie in Cookies.get()) {
 		Cookies.remove(cookie['name'])
 	}
+	*/
 
     $.getJSON({
         dataType: "json", 
