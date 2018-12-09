@@ -8,7 +8,7 @@ function renderCities(cities) {
         elCity.append($('<h2>' + city.name + '</h2>' ));
         elCity.append($('<h3>' + city.time + '</h3>')); 
 
-        if (window.displayWeather) {
+        if (city.weather.length > 0) {
             elCity.append($('<img src = "/images/' + city.weather + '.svg" />'));
         }
 
