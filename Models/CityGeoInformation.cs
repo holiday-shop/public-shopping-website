@@ -10,6 +10,7 @@ namespace dotnetcore_city_info.Models
         public int Id { get; }
         public string Name { get; }
         public string Country { get; }
+		public string PhotoUrl { get; }
 
         public CityGeoInformation(int id, string name, string country)
         {
