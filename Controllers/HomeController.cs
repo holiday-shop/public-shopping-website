@@ -53,7 +53,7 @@ namespace dotnetcore_city_info.Controllers
                 new City("Barcelona", "Europe/Madrid", "Sun", "3.166 million"),
                 new City("Honolulu", "Pacific/Honolulu", "Sun", "274,658 thousand"),
                 new City("Sydney", "Australia/Sydney", "Sun", "4.029 million" ),
-                new City("Iceland", "UTC", "Cloud-Sun", "334,252 thousand")  
+                new City("Reykjavik", "UTC", "Cloud-Sun", "334,252 thousand")  
             };
 
             var cityGeoInfos = _cityGeoInformationRepository.GetCities();
