@@ -12,8 +12,8 @@ function renderCities(cities) {
             elHoliday.append($('<img src = "/images/' + holiday.weather + '.svg" />'));
         }
 
-        if (holiday.population != "") { 
-            elHoliday.append($('<p>Population: ' + holiday.population + '</p>'));
+        if (holiday.familyfriendly != "") { 
+            elHoliday.append($('<p>Family Friendly: ' + holiday.familyfriendly + '</p>'));
         }
 
         $('content').append(elHoliday);
