@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using dotnetcore_city_info.Models;
-using dotnetcore_city_info.Extensions;
+using dotnetcore_holiday_info.Models;
+using dotnetcore_holiday_info.Extensions;
 
-namespace dotnetcore_city_info.Repository
+namespace dotnetcore_holiday_info.Repository
 {
-    public class CityGeoInformationRepository : DatabaseRepository, ICityGeoInformationRepository
+    public class HolidayGeoInformationRepository : DatabaseRepository, IHolidayGeoInformationRepository
     {
-        public CityGeoInformationRepository(string connectionString) : base(connectionString)
+        public HolidayGeoInformationRepository(string connectionString) : base(connectionString)
         {
         }
 
-        public IReadOnlyList<CityGeoInformation> GetCities()
+        public IReadOnlyList<HolidayGeoInformation> GetCities()
         {
             var sqlQuery = @"
                 select
                     id,
                     name,
                     country
-                from city_metadata
+                from holiday_metadata
                 order by name";
 
             return Read(sqlQuery, null, System.Data.CommandType.Text, reader =>
             {
-                var cityGeoInfos = new List<CityGeoInformation>();
+                var holidayGeoInfos = new List<HolidayGeoInformation>();
 
                 while (reader.Read())
                 {
@@ -33,10 +33,10 @@ namespace dotnetcore_city_info.Repository
                     var name = reader.GetValue<string>("name");
                     var country = reader.GetValue<string>("country");
 
-                    cityGeoInfos.Add(new CityGeoInformation(id, name, country));
+                    holidayGeoInfos.Add(new HolidayGeoInformation(id, name, country));
                 }
 
-                return cityGeoInfos.AsReadOnly();
+                return holidayGeoInfos.AsReadOnly();
             });
         }
     }

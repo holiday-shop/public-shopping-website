@@ -1,8 +1,8 @@
 using System;
 
-namespace dotnetcore_city_info.Models
+namespace dotnetcore_holiday_info.Models
 {
-    public class City
+    public class Holiday
     {
         public string Name { get; }
         public string Time { get; }
@@ -11,11 +11,11 @@ namespace dotnetcore_city_info.Models
 
         public string Weather { get; }
  
-        public string Population { get; }
+        public string FamilyFriendly { get; }
 
-        public CityGeoInformation CityGeoInformation { get; set; }
+        public HolidayGeoInformation HolidayGeoInformation { get; set; }
 
-        public City(string name, string tz, string weatherIcon, string population) {
+        public Holiday(string name, string tz, string weatherIcon, string familyFriendly) {
             this.Name = name;
             try
             {
@@ -27,10 +27,10 @@ namespace dotnetcore_city_info.Models
 
             this.Weather = ""; // Don't set the weather on this branch.
 
-            if (Environment.GetEnvironmentVariable("SHOW_POPULATION") == "YES") {
-                this.Population = population;
+            if (Environment.GetEnvironmentVariable("SHOW_FAMILY") == "YES") {
+                this.FamilyFriendly = familyFriendly;
             } else {
-                this.Population = "";
+                this.FamilyFriendly = "";
             }
 
             this.PodName = System.Net.Dns.GetHostName();

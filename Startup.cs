@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using dotnetcore_city_info.Repository;
+using dotnetcore_holiday_info.Repository;
 
-namespace dotnetcore_city_info
+namespace dotnetcore_holiday_info
 {
     public class Startup
     {
@@ -34,11 +34,11 @@ namespace dotnetcore_city_info
             var connectionString = $"Server={server};Database={database};User Id={username};Password={password}";
 
             services.AddMvc();
-            services.AddTransient<ICityGeoInformationRepository, MockCityGeoInformationRepository>(context =>
+            services.AddTransient<IHolidayGeoInformationRepository, MockHolidayGeoInformationRepository>(context =>
             {
-                //var cityGeoInformationRepository = new CityGeoInformationRepository(connectionString);
-                var cityGeoInformationRepository = new MockCityGeoInformationRepository(connectionString);
-                return cityGeoInformationRepository;
+                //var holidayGeoInformationRepository = new HolidayGeoInformationRepository(connectionString);
+                var holidayGeoInformationRepository = new MockHolidayGeoInformationRepository(connectionString);
+                return holidayGeoInformationRepository;
             });
         }
 

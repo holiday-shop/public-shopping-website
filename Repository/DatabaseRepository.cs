@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dotnetcore_city_info.Repository
+namespace dotnetcore_holiday_info.Repository
 {
     public abstract class DatabaseRepository
     {

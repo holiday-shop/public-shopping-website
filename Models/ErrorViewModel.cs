@@ -1,6 +1,6 @@
 using System;
 
-namespace dotnetcore_city_info.Models
+namespace dotnetcore_holiday_info.Models
 {
     public class ErrorViewModel
     {

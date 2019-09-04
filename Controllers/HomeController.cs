@@ -4,18 +4,18 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using dotnetcore_city_info.Models;
-using dotnetcore_city_info.Repository;
+using dotnetcore_holiday_info.Models;
+using dotnetcore_holiday_info.Repository;
  
-namespace dotnetcore_city_info.Controllers
+namespace dotnetcore_holiday_info.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ICityGeoInformationRepository _cityGeoInformationRepository;
+        private readonly IHolidayGeoInformationRepository _holidayGeoInformationRepository;
 
-        public HomeController(ICityGeoInformationRepository cityGeoInformationRepository)
+        public HomeController(IHolidayGeoInformationRepository holidayGeoInformationRepository)
         {
-            _cityGeoInformationRepository = cityGeoInformationRepository;
+            _holidayGeoInformationRepository = holidayGeoInformationRepository;
         }
 
         public IActionResult Index()
@@ -45,22 +45,22 @@ namespace dotnetcore_city_info.Controllers
         [HttpGet]
         public JsonResult GetCities()
         {
-            var cities = new List<City>() {
-                new City("London", "Greenwich", "Cloud-Rain", "8.788 million"), 
-                new City("Paris", "CET", "Cloud-Lightning", "2.244 million"),
-                new City("Moscow", "Europe/Moscow", "Cloud-Sun", "11.92 million"),
-                new City("Munich", "Europe/Berlin", "Cloud-Rain", "1.43 million"),
-                new City("Barcelona", "Europe/Madrid", "Sun", "3.166 million"),
-                new City("Honolulu", "Pacific/Honolulu", "Sun", "274,658 thousand"),
-                new City("Sydney", "Australia/Sydney", "Sun", "4.029 million" ),
-                new City("Reykjavik", "UTC", "Cloud-Sun", "334,252 thousand")  
+            var cities = new List<Holiday>() {
+                new Holiday("London", "Greenwich", "Cloud-Rain", "8.788 million"), 
+                new Holiday("Paris", "CET", "Cloud-Lightning", "2.244 million"),
+                new Holiday("Moscow", "Europe/Moscow", "Cloud-Sun", "11.92 million"),
+                new Holiday("Munich", "Europe/Berlin", "Cloud-Rain", "1.43 million"),
+                new Holiday("Barcelona", "Europe/Madrid", "Sun", "3.166 million"),
+                new Holiday("Honolulu", "Pacific/Honolulu", "Sun", "274,658 thousand"),
+                new Holiday("Sydney", "Australia/Sydney", "Sun", "4.029 million" ),
+                new Holiday("Reykjavik", "UTC", "Cloud-Sun", "334,252 thousand")  
             };
 
-            var cityGeoInfos = _cityGeoInformationRepository.GetCities();
+            var holidayGeoInfos = _holidayGeoInformationRepository.GetCities();
 
-            foreach (var city in cities)
+            foreach (var holiday in cities)
             {
-                city.CityGeoInformation = cityGeoInfos.FirstOrDefault(cgi => string.Equals(cgi.Name, city.Name, StringComparison.OrdinalIgnoreCase));
+                holiday.HolidayGeoInformation = holidayGeoInfos.FirstOrDefault(cgi => string.Equals(cgi.Name, holiday.Name, StringComparison.OrdinalIgnoreCase));
             }
 
             return Json(cities);

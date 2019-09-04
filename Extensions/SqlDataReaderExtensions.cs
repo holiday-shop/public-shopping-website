@@ -1,7 +1,7 @@
 using System;
 using System.Data.SqlClient;
 
-namespace dotnetcore_city_info.Extensions
+namespace dotnetcore_holiday_info.Extensions
 {
     public static class SqlDataReaderExtensions
     {

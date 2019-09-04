@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace dotnetcore_city_info
+namespace dotnetcore_holiday_info
 {
     public class Program
     {
