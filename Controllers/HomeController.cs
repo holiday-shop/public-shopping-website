@@ -46,14 +46,12 @@ namespace dotnetcore_holiday_info.Controllers
         public JsonResult GetCities()
         {
             var cities = new List<Holiday>() {
-                new Holiday("London", "Greenwich", "Cloud-Rain", "8.788 million"), 
-                new Holiday("Paris", "CET", "Cloud-Lightning", "2.244 million"),
-                new Holiday("Moscow", "Europe/Moscow", "Cloud-Sun", "11.92 million"),
-                new Holiday("Munich", "Europe/Berlin", "Cloud-Rain", "1.43 million"),
-                new Holiday("Barcelona", "Europe/Madrid", "Sun", "3.166 million"),
-                new Holiday("Honolulu", "Pacific/Honolulu", "Sun", "274,658 thousand"),
-                new Holiday("Sydney", "Australia/Sydney", "Sun", "4.029 million" ),
-                new Holiday("Reykjavik", "UTC", "Cloud-Sun", "334,252 thousand")  
+                new Holiday("See the city sights of London", "Greenwich", "Cloud-Rain", "Yes"), 
+                new Holiday("Romantic Break for Two In Paris", "CET", "Cloud-Lightning", "No!"),
+                new Holiday("Beach break in the The Bahamas", "EDT", "Sun", "No"),
+                new Holiday("Octoberfest in Munich", "Europe/Berlin", "Cloud-Rain", "No!"),
+                new Holiday("Austrailian Adventure", "Australia/Sydney", "Sun", "Yes" ),
+                new Holiday("The northern lights in Iceland", "UTC", "Cloud-Sun", "Yes")  
             };
 
             var holidayGeoInfos = _holidayGeoInformationRepository.GetCities();

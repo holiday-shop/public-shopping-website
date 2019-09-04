@@ -33,7 +33,7 @@
     }
 }
 
-div.city {
+div.holiday {
     border: 1px solid black;
     border-radius: 1em;
     background-color: #dee3e7;
@@ -42,10 +42,10 @@ div.city {
     display: inline-block;
     vertical-align: top;
     margin: 1em;
-    width: 12em;
+    width: 24em;
 }
 
-p.cityUpdateInfo {
+p.holidayUpdateInfo {
     padding-top: 1em;
     padding-bottom: 1em;
 }
