@@ -9,6 +9,6 @@ namespace dotnetcore_holiday_info.Repository
 {
     public interface IHolidayGeoInformationRepository
     {
-        IReadOnlyList<HolidayGeoInformation> GetCities();
+        IReadOnlyList<HolidayGeoInformation> GetHolidays();
     }
 }

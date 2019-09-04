@@ -13,7 +13,7 @@ namespace dotnetcore_holiday_info.Repository
         {
         }
 
-        public IReadOnlyList<HolidayGeoInformation> GetCities()
+        public IReadOnlyList<HolidayGeoInformation> GetHolidays()
         {
             var sqlQuery = @"
                 select

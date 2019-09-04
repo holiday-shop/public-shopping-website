@@ -13,7 +13,7 @@ namespace dotnetcore_holiday_info.Repository
             Console.WriteLine($"Connection string to mock: {connectionString}");
         }
 
-        public IReadOnlyList<HolidayGeoInformation> GetCities()
+        public IReadOnlyList<HolidayGeoInformation> GetHolidays()
         {
             /*
              * new Holiday("London", "Greenwich", "Cloud-Rain", "8.788 million"), 

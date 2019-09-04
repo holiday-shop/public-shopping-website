@@ -43,7 +43,7 @@ namespace dotnetcore_holiday_info.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetCities()
+        public JsonResult GetHolidays()
         {
             var cities = new List<Holiday>() {
                 new Holiday("See the city sights of London", "Greenwich", "Cloud-Rain", "Yes", 299), 
@@ -54,7 +54,7 @@ namespace dotnetcore_holiday_info.Controllers
                 new Holiday("The northern lights in Iceland", "UTC", "Cloud-Sun", "Yes", 1300)  
             };
 
-            var holidayGeoInfos = _holidayGeoInformationRepository.GetCities();
+            var holidayGeoInfos = _holidayGeoInformationRepository.GetHolidays();
 
             foreach (var holiday in cities)
             {
