@@ -10,12 +10,14 @@ namespace dotnetcore_holiday_info.Models
         public string PodName { get; }
 
         public string Weather { get; }
+
+		public int Cost { get; }
  
         public string FamilyFriendly { get; }
 
         public HolidayGeoInformation HolidayGeoInformation { get; set; }
 
-        public Holiday(string name, string tz, string weatherIcon, string familyFriendly) {
+        public Holiday(string name, string tz, string weatherIcon, string familyFriendly, int cost) {
             this.Name = name;
             try
             {
@@ -26,6 +28,8 @@ namespace dotnetcore_holiday_info.Models
             }
 
             this.Weather = ""; // Don't set the weather on this branch.
+
+			this.Cost = cost;
 
             if (Environment.GetEnvironmentVariable("SHOW_FAMILY") == "YES") {
                 this.FamilyFriendly = familyFriendly;
